@@ -5,16 +5,7 @@ import TerminalWindow from "./TerminalWindow";
 import FolderItem from "./FolderItem";
 import Button from "./Button";
 import Cursor from "./Cursor";
-
-const TUX = String.raw`
-         .--.
-        |o_o |
-        |:_/ |
-       //   \ \
-      (|     | )
-     /'\_   _/'\
-     \___)=(___/
-`;
+import AsciiTux from "./AsciiTux";
 
 const folders = [
   { name: "01_about_me", href: "#about" },
@@ -84,14 +75,9 @@ export default function Hero() {
               </motion.div>
             </div>
 
-            <motion.pre
-              variants={item}
-              aria-hidden="true"
-              className="mx-auto shrink-0 select-none overflow-hidden font-mono text-accent md:mx-0"
-              style={{ fontSize: "clamp(0.8rem, 2.2vw, 1.15rem)", lineHeight: 1.25 }}
-            >
-              {TUX}
-            </motion.pre>
+            <motion.div variants={item} className="shrink-0">
+              <AsciiTux />
+            </motion.div>
           </motion.div>
         </TerminalWindow>
 
