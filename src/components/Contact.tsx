@@ -5,12 +5,14 @@ import { Github, Linkedin, Mail, Instagram, FileDown } from "lucide-react";
 import Reveal from "./Reveal";
 import TerminalWindow from "./TerminalWindow";
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const channels = [
   { label: "walman@example.com", href: "mailto:walman@example.com", icon: Mail },
   { label: "github.com/walman", href: "https://github.com/walman", icon: Github },
   { label: "linkedin.com/in/walman", href: "https://linkedin.com/in/walman", icon: Linkedin },
   { label: "instagram.com/walman", href: "https://instagram.com/walman", icon: Instagram },
-  { label: "resume.pdf", href: "/cv.pdf", icon: FileDown },
+  { label: "resume.pdf", href: `${BASE_PATH}/cv.pdf`, icon: FileDown },
 ];
 
 const inputClass =
