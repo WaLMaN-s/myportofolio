@@ -5,7 +5,7 @@ import TerminalWindow from "./TerminalWindow";
 import FolderItem from "./FolderItem";
 import Button from "./Button";
 import Cursor from "./Cursor";
-import AsciiTux from "./AsciiTux";
+import AsciiLogo from "./AsciiLogo";
 
 const folders = [
   { name: "01_about_me", href: "#about" },
@@ -76,7 +76,7 @@ export default function Hero() {
             </div>
 
             <motion.div variants={item} className="shrink-0">
-              <AsciiTux />
+              <AsciiLogo />
             </motion.div>
           </motion.div>
         </TerminalWindow>

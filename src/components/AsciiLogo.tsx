@@ -3,32 +3,35 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
-const TUX = String.raw`
-        a8888b.
-       d888888b.
-       8P"YP"Y88
-       8|o||o|88
-       8'    .88
-       8'---.Y8.
-      d/      '8b.
-     dP   .    Y8b.
-    d8:'  "  '::88b
-   d8"         'Y88b
-  :8P    '      :888
-   8a.   :     _a88P
- ._/"Yaa_:   .| 88P|
- \    YP"    '| 8P  '.
- /     \.___.d|    .'
- '--..__)8888P'._.'
+const ARCH = `
+                   -\`
+                  .o+\`
+                 \`ooo/
+                \`+oooo:
+               \`+oooooo:
+               -+oooooo+:
+             \`/:-:++oooo+:
+            \`/++++/+++++++:
+           \`/++++++++++++++:
+          \`/+++ooooooooooooo/\`
+         ./ooosssso++osssssso+\`
+        .oossssso-\`\`\`\`/ossssss+\`
+       -osssssso.      :ssssssso.
+      :osssssss/        osssso+++.
+     /ossssssss/        +ssssooo/-
+   \`/ossssso+/:-        -:/+osssso+-
+  \`+sso+:-\`                 \`.-/+oso:
+ \`++:.                           \`-/+/
+ .\`                                 \`/
 `;
 
 const GRADIENT =
   "linear-gradient(115deg, #10b981, #06b6d4, #3b82f6, #a855f7, #ec4899, #f97316, #10b981)";
 
-// One aurora loop takes ~13s; hover speeds it up smoothly via speedRef
-const LOOP_SECONDS = 13;
+// One aurora loop takes ~11s; hover speeds it up smoothly via speedRef
+const LOOP_SECONDS = 11;
 
-export default function AsciiTux() {
+export default function AsciiLogo() {
   const mainRef = useRef<HTMLPreElement>(null);
   const glowRef = useRef<HTMLPreElement>(null);
   const speedRef = useRef(1);
@@ -36,7 +39,7 @@ export default function AsciiTux() {
   const reduced = useReducedMotion();
 
   useEffect(() => {
-    speedRef.current = hovered ? 1.5 : 1;
+    speedRef.current = hovered ? 1.6 : 1;
   }, [hovered]);
 
   useEffect(() => {
@@ -65,25 +68,36 @@ export default function AsciiTux() {
     WebkitBackgroundClip: "text",
     backgroundClip: "text",
     color: "transparent",
-    fontSize: "clamp(0.55rem, 2.4vw, 1rem)",
-    lineHeight: 1.15,
+    fontSize: "clamp(0.42rem, 1.5vw, 0.72rem)",
+    lineHeight: 1.2,
   } as const;
+
+  const still = { x: 0, y: 0, rotate: 0, opacity: 1 };
+  // different periods per axis give an organic drift instead of a metronome bob
+  const drift = {
+    y: [0, -5, 0, 3, 0],
+    x: [0, 2.5, 0, -2.5, 0],
+    rotate: [0, 0.6, 0, -0.6, 0],
+    opacity: [1, 0.96, 1],
+  };
+  const driftTransition = {
+    y: { duration: 7, repeat: Infinity, ease: "easeInOut" as const },
+    x: { duration: 9, repeat: Infinity, ease: "easeInOut" as const },
+    rotate: { duration: 11, repeat: Infinity, ease: "easeInOut" as const },
+    opacity: { duration: 5.5, repeat: Infinity, ease: "easeInOut" as const },
+  };
 
   return (
     <motion.div
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      animate={
-        reduced || hovered
-          ? { y: 0, opacity: 1 }
-          : { y: [0, -3, 0], opacity: [1, 0.96, 1] }
-      }
+      animate={reduced || hovered ? still : drift}
       transition={
         reduced || hovered
           ? { duration: 0.6, ease: "easeOut" }
-          : { duration: 5.5, repeat: Infinity, ease: "easeInOut" }
+          : driftTransition
       }
-      className="tux-stage relative mx-auto w-fit select-none p-4 md:mx-0"
+      className="ascii-stage relative mx-auto w-fit select-none p-4 md:mx-0"
     >
       <pre
         ref={glowRef}
@@ -93,7 +107,7 @@ export default function AsciiTux() {
           hovered ? "opacity-50" : "opacity-25"
         }`}
       >
-        {TUX}
+        {ARCH}
       </pre>
       <pre
         ref={mainRef}
@@ -101,14 +115,14 @@ export default function AsciiTux() {
         style={gradientText}
         className="relative whitespace-pre font-mono"
       >
-        {TUX}
+        {ARCH}
       </pre>
       <pre
         aria-hidden="true"
-        className="tux-shimmer absolute inset-4 whitespace-pre font-mono"
-        style={{ fontSize: gradientText.fontSize, lineHeight: 1.15 }}
+        className="ascii-shimmer absolute inset-4 whitespace-pre font-mono"
+        style={{ fontSize: gradientText.fontSize, lineHeight: 1.2 }}
       >
-        {TUX}
+        {ARCH}
       </pre>
     </motion.div>
   );
