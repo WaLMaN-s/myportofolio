@@ -1,7 +1,8 @@
-import { User } from "lucide-react";
 import Reveal from "./Reveal";
 import SocialLinks from "./SocialLinks";
 import TerminalWindow from "./TerminalWindow";
+
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const timeline = [
   { year: "2025", text: "Building full-stack products & Linux infrastructure" },
@@ -16,14 +17,14 @@ export default function About() {
         <TerminalWindow title="walman@portfolio:~$ cat about.md">
           <div className="grid gap-10 md:grid-cols-[auto_1fr] md:gap-14">
             <div className="mx-auto md:mx-0">
-              {/* Replace this placeholder with <Image src="/profile.jpg" ... /> */}
-              <div
-                role="img"
-                aria-label="Profile photo placeholder"
-                className="flex h-48 w-48 items-center justify-center rounded-2xl border border-border bg-background text-muted sm:h-56 sm:w-56"
-              >
-                <User size={64} strokeWidth={1} aria-hidden="true" />
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`${BASE_PATH}/profile.jpeg`}
+                alt="Portrait of Walman Ss"
+                width={1086}
+                height={1448}
+                className="h-48 w-48 rounded-2xl border border-border object-cover object-top sm:h-56 sm:w-56"
+              />
             </div>
 
             <div className="text-center md:text-left">
