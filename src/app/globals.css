@@ -132,6 +132,25 @@ body {
   }
 }
 
+/* Kotak tombol (View Project dll): border, teks & tint background ikut aurora */
+.rainbow-box {
+  border-color: currentColor;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  animation: aurora-ink 11s linear infinite;
+  transition: filter 0.2s ease, background 0.2s ease;
+}
+
+.rainbow-box:hover {
+  filter: brightness(1.25);
+  background: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rainbow-box {
+    animation: none;
+  }
+}
+
 /* About: cross-fade foto profil saat ganti tema (dark → profile-dark, light → profile) */
 .profile-photo-dark,
 .profile-photo-light {

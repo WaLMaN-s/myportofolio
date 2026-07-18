@@ -18,7 +18,7 @@ export default function Button({
     "inline-flex items-center gap-2 rounded-md border px-5 py-2.5 font-mono text-sm transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
   const styles =
     variant === "primary"
-      ? "border-accent bg-accent/10 text-accent hover:bg-accent hover:text-background"
+      ? "rainbow-box"
       : "border-border bg-card text-foreground hover:border-accent hover:text-accent";
 
   return (

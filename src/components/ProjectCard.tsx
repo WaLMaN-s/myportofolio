@@ -49,7 +49,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-5 inline-flex w-fit items-center gap-2 rounded-md border border-border px-4 py-2 font-mono text-xs text-foreground transition-colors duration-200 hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        className="rainbow-box mt-5 inline-flex w-fit items-center gap-2 rounded-md border px-4 py-2 font-mono text-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         <span className="rainbow-ink" aria-hidden="true">
           &gt;
