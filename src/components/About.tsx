@@ -41,7 +41,7 @@ export default function About() {
 
             <div className="text-center md:text-left">
               <h2 className="font-mono text-2xl font-bold text-foreground">
-                <span className="text-accent"># </span>About Me
+                <span className="rainbow-ink"># </span>About Me
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-muted sm:text-base">
                 I&apos;m Walman, a full stack developer who lives in the

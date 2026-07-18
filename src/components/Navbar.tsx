@@ -52,7 +52,7 @@ export default function Navbar() {
           className="shrink-0 font-mono text-sm text-foreground"
           aria-label="Home"
         >
-          walman@portfolio:<span className="text-accent">~$</span>
+          walman@portfolio:<span className="rainbow-ink">~$</span>
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -146,7 +146,7 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className="block rounded-md px-3 py-3 font-mono text-sm tracking-wider text-muted transition-colors duration-200 hover:bg-card hover:text-accent"
                   >
-                    <span className="mr-2 text-accent" aria-hidden="true">
+                    <span className="rainbow-ink mr-2" aria-hidden="true">
                       &gt;
                     </span>
                     {link.label}

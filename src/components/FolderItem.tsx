@@ -18,7 +18,7 @@ export default function FolderItem({ name, href }: FolderItemProps) {
       >
         <Folder
           size={16}
-          className="shrink-0 text-accent"
+          className="rainbow-ink shrink-0"
           aria-hidden="true"
         />
         <span className="flex-1 truncate">{name}</span>

@@ -48,7 +48,7 @@ export default function Contact() {
         <Reveal>
           <TerminalWindow title="ssh walman@contact" className="h-full">
             <p className="font-mono text-sm text-muted">
-              <span className="text-accent">➜</span> Connection established.
+              <span className="rainbow-ink">➜</span> Connection established.
               Reach me through any channel:
             </p>
             <ul className="mt-6 flex flex-col gap-2">
@@ -62,7 +62,7 @@ export default function Contact() {
                   >
                     <Icon
                       size={16}
-                      className="shrink-0 text-accent"
+                      className="rainbow-ink shrink-0"
                       aria-hidden="true"
                     />
                     <span className="truncate group-hover:text-accent">
@@ -83,7 +83,7 @@ export default function Contact() {
                   htmlFor="contact-name"
                   className="mb-1.5 block font-mono text-xs text-muted"
                 >
-                  <span className="text-accent">$</span> name
+                  <span className="rainbow-ink">$</span> name
                 </label>
                 <input
                   id="contact-name"
@@ -99,7 +99,7 @@ export default function Contact() {
                   htmlFor="contact-email"
                   className="mb-1.5 block font-mono text-xs text-muted"
                 >
-                  <span className="text-accent">$</span> email
+                  <span className="rainbow-ink">$</span> email
                 </label>
                 <input
                   id="contact-email"
@@ -115,7 +115,7 @@ export default function Contact() {
                   htmlFor="contact-message"
                   className="mb-1.5 block font-mono text-xs text-muted"
                 >
-                  <span className="text-accent">$</span> message
+                  <span className="rainbow-ink">$</span> message
                 </label>
                 <textarea
                   id="contact-message"

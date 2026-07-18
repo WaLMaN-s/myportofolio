@@ -27,7 +27,7 @@ export default function Button({
       className={`${base} ${styles}`}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
-      <span aria-hidden="true" className="text-accent">
+      <span aria-hidden="true" className="rainbow-ink">
         &gt;
       </span>
       {children}

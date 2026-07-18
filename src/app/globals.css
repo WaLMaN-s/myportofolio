@@ -98,6 +98,40 @@ body {
     cursor-rainbow 11s linear infinite;
 }
 
+/* Simbol terminal (ikon folder, $, ~$, #, >, ➜) ikut palet aurora Arch, sinkron 11s */
+@keyframes aurora-ink {
+  0%,
+  100% {
+    color: #10b981;
+  }
+  16.6% {
+    color: #06b6d4;
+  }
+  33.3% {
+    color: #3b82f6;
+  }
+  50% {
+    color: #a855f7;
+  }
+  66.6% {
+    color: #ec4899;
+  }
+  83.3% {
+    color: #f97316;
+  }
+}
+
+.rainbow-ink {
+  color: #10b981;
+  animation: aurora-ink 11s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rainbow-ink {
+    animation: none;
+  }
+}
+
 /* About: cross-fade foto profil saat ganti tema (dark → profile-dark, light → profile) */
 .profile-photo-dark,
 .profile-photo-light {

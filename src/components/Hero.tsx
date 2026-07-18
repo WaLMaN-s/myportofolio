@@ -83,7 +83,7 @@ export default function Hero() {
 
         <TerminalWindow title="walman@portfolio:~$ ls -a" className="h-fit">
           <p className="mb-3 font-mono text-xs text-muted">
-            <span className="text-accent">$</span> ls -a ./sections
+            <span className="rainbow-ink">$</span> ls -a ./sections
           </p>
           <nav aria-label="Section shortcuts" className="flex flex-col gap-1">
             {folders.map((folder) => (

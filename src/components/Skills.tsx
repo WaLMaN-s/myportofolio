@@ -29,7 +29,7 @@ export default function Skills() {
           <Reveal key={cat.name} delay={i * 0.05}>
             <TerminalWindow title={`~/skills/${cat.name}`} className="h-full">
               <div className="flex items-center gap-2 font-mono text-sm text-foreground">
-                <Folder size={15} className="text-accent" aria-hidden="true" />
+                <Folder size={15} className="rainbow-ink" aria-hidden="true" />
                 {cat.name}
               </div>
               <ul className="mt-4 flex flex-wrap gap-2">

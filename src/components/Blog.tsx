@@ -28,7 +28,7 @@ export default function Blog() {
         <Reveal>
           <TerminalWindow title="walman@portfolio:~/blog">
             <p className="font-mono text-sm text-muted">
-              <span className="text-accent">$</span> ls blog
+              <span className="rainbow-ink">$</span> ls blog
             </p>
             <p className="mt-3 font-mono text-sm text-muted">
               No articles yet.
@@ -43,7 +43,7 @@ export default function Blog() {
                 href={article.href}
                 className="group flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-colors duration-300 hover:border-accent/60"
               >
-                <FileText size={18} className="text-accent" aria-hidden="true" />
+                <FileText size={18} className="rainbow-ink" aria-hidden="true" />
                 <h3 className="mt-3 font-mono text-base font-semibold text-foreground group-hover:text-accent">
                   {article.title}
                 </h3>

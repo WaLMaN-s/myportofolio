@@ -20,7 +20,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       className="group flex h-full flex-col rounded-xl border border-border bg-card p-5 transition-colors duration-300 hover:border-accent/60 hover:shadow-[0_0_24px_rgba(34,197,94,0.08)]"
     >
       <div className="flex items-center justify-between">
-        <span className="flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background text-accent">
+        <span className="rainbow-ink flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background">
           <Icon size={18} aria-hidden="true" />
         </span>
         <ArrowUpRight
@@ -51,7 +51,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         rel="noopener noreferrer"
         className="mt-5 inline-flex w-fit items-center gap-2 rounded-md border border-border px-4 py-2 font-mono text-xs text-foreground transition-colors duration-200 hover:border-accent hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
-        <span className="text-accent" aria-hidden="true">
+        <span className="rainbow-ink" aria-hidden="true">
           &gt;
         </span>
         View Project
