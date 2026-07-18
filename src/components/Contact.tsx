@@ -1,17 +1,16 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { Github, Linkedin, Mail, Instagram, FileDown } from "lucide-react";
+import { Github, Mail, Instagram, FileDown } from "lucide-react";
 import Reveal from "./Reveal";
 import TerminalWindow from "./TerminalWindow";
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const channels = [
-  { label: "walman@example.com", href: "mailto:walman@example.com", icon: Mail },
-  { label: "github.com/walman", href: "https://github.com/walman", icon: Github },
-  { label: "linkedin.com/in/walman", href: "https://linkedin.com/in/walman", icon: Linkedin },
-  { label: "instagram.com/walman", href: "https://instagram.com/walman", icon: Instagram },
+  { label: "sswalman49@gmail.com", href: "mailto:sswalman49@gmail.com", icon: Mail },
+  { label: "github.com/WaLMaN-s", href: "https://github.com/WaLMaN-s", icon: Github },
+  { label: "instagram.com/faber_sitorus", href: "https://instagram.com/faber_sitorus", icon: Instagram },
   { label: "resume.pdf", href: `${BASE_PATH}/cv.pdf`, icon: FileDown },
 ];
 
@@ -28,7 +27,7 @@ export default function Contact() {
       `Portfolio contact from ${data.get("name")}`
     );
     const body = encodeURIComponent(String(data.get("message") ?? ""));
-    window.location.href = `mailto:walman@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:sswalman49@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
   };
 

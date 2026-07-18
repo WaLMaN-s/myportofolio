@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Github, Linkedin, Mail, Menu, X, Sun, Moon } from "lucide-react";
+import { Github, Instagram, Mail, Menu, X, Sun, Moon } from "lucide-react";
 
 const navLinks = [
   { label: "HOME", href: "#home" },
@@ -16,9 +16,9 @@ const navLinks = [
 ];
 
 const iconLinks = [
-  { label: "GitHub", href: "https://github.com/walman", icon: Github },
-  { label: "LinkedIn", href: "https://linkedin.com/in/walman", icon: Linkedin },
-  { label: "Email", href: "mailto:walman@example.com", icon: Mail },
+  { label: "GitHub", href: "https://github.com/WaLMaN-s", icon: Github },
+  { label: "Instagram", href: "https://instagram.com/faber_sitorus", icon: Instagram },
+  { label: "Email", href: "mailto:sswalman49@gmail.com", icon: Mail },
 ];
 
 export default function Navbar() {
