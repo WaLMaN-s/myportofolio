@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Walman Ss — Terminal Portfolio
 
-## Getting Started
+Portfolio pribadi bergaya terminal Linux. **Live di: https://walman-s.github.io/myportofolio/**
 
-First, run the development server:
+Stack: Next.js 15 (App Router) · TypeScript · Tailwind CSS v4 · Framer Motion · lucide-react
+
+---
+
+## 🔁 Cara Ngoding Sampai Live Lagi
+
+### 1. Nyalakan server development
 
 ```bash
+cd ~/WEB/portfolio
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka **http://localhost:3000**. Setiap file di-save, browser langsung update sendiri (hot reload) — ngodingnya di sini.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. Kalau sudah puas, push
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git add -A
+git commit -m "tulis perubahannya di sini"
+git push
+```
 
-## Learn More
+**Sudah, itu aja.** Begitu push ke branch `main`, GitHub Actions otomatis build versi statis dan deploy ke GitHub Pages. Sekitar 2–3 menit kemudian perubahan tampil di https://walman-s.github.io/myportofolio/
 
-To learn more about Next.js, take a look at the following resources:
+> Kalau belum kelihatan berubah, hard refresh: **Ctrl+Shift+R** (browser suka nge-cache).
+> Status deploy bisa dicek di tab **Actions** repo GitHub.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. (Opsional) Tes versi production di lokal dulu
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm run build
+npm run start   # jalan di port 3001, biar gak tabrakan sama web lain
+```
 
-## Deploy on Vercel
+Tidak wajib — kalau build gagal di GitHub Actions, situs lama tetap live, tidak akan rusak.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 File yang Sering Diedit
+
+| Mau ganti apa | Edit file |
+|---|---|
+| Isi hero / nama / tagline | `src/components/Hero.tsx` |
+| Tentang saya + timeline | `src/components/About.tsx` |
+| Daftar project & link | `src/components/Projects.tsx` |
+| Pengalaman kerja | `src/components/Experience.tsx` |
+| Daftar skill | `src/components/Skills.tsx` |
+| Link sosial (GitHub, LinkedIn, dll) | `src/components/SocialLinks.tsx` |
+| Warna & animasi global | `src/app/globals.css` |
+| Foto profil mode gelap | `public/profile-dark.jpeg` (timpa filenya) |
+| Foto profil mode terang | `public/profile.jpeg` (timpa filenya) |
+| CV yang bisa didownload | `public/cv.pdf` (timpa filenya) |
+| Logo Arch ASCII + gradient | `src/components/AsciiLogo.tsx` |
+
+---
+
+## ⚠️ Catatan Penting
+
+- **Jangan upgrade `lucide-react`** — harus tetap di `0.469.0`. Versi 1.x menghapus ikon brand (GitHub/LinkedIn/Instagram) yang dipakai situs ini.
+- Deploy diatur `.github/workflows/deploy.yml`: build export statis (`STATIC_EXPORT=1`, base path `/myportofolio`) lalu publish ke branch `gh-pages`. Tidak perlu diutak-atik.
+- Kalau nambah gambar/file di `public/`, aksesnya lewat base path — lihat pola `BASE_PATH` di `src/components/About.tsx` atau `Contact.tsx`.
+- Port produksi lokal sengaja **3001** (`npm run start`) supaya tidak bentrok dengan web lain di komputer ini.
