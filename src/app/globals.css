@@ -98,6 +98,31 @@ body {
     cursor-rainbow 11s linear infinite;
 }
 
+/* About: cross-fade foto profil saat ganti tema (dark → profile-dark, light → profile) */
+.profile-photo-dark,
+.profile-photo-light {
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.profile-photo-light {
+  opacity: 0;
+  transform: scale(1.03);
+}
+:root[data-theme="light"] .profile-photo-light {
+  opacity: 1;
+  transform: scale(1);
+}
+:root[data-theme="light"] .profile-photo-dark {
+  opacity: 0;
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-photo-dark,
+  .profile-photo-light {
+    transition: none;
+  }
+}
+
 /* Faint stage behind the ASCII Tux: radial glow + terminal grid (<5% opacity) */
 .ascii-stage::before {
   content: "";

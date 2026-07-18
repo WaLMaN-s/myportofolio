@@ -17,14 +17,26 @@ export default function About() {
         <TerminalWindow title="walman@portfolio:~$ cat about.md">
           <div className="grid gap-10 md:grid-cols-[auto_1fr] md:gap-14">
             <div className="mx-auto md:mx-0">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`${BASE_PATH}/profile.jpeg`}
-                alt="Portrait of Walman Ss"
-                width={1086}
-                height={1448}
-                className="h-48 w-48 rounded-2xl border border-border object-cover object-top sm:h-56 sm:w-56"
-              />
+              {/* Dua foto ditumpuk: dark mode → profile-dark, light mode → profile (cross-fade via CSS) */}
+              <div className="relative h-48 w-48 sm:h-56 sm:w-56">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${BASE_PATH}/profile-dark.jpeg`}
+                  alt="Portrait of Walman Ss"
+                  width={1086}
+                  height={1448}
+                  className="profile-photo-dark absolute inset-0 h-full w-full rounded-2xl border border-border object-cover object-top"
+                />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${BASE_PATH}/profile.jpeg`}
+                  alt=""
+                  aria-hidden="true"
+                  width={1086}
+                  height={1448}
+                  className="profile-photo-light absolute inset-0 h-full w-full rounded-2xl border border-border object-cover object-top"
+                />
+              </div>
             </div>
 
             <div className="text-center md:text-left">
