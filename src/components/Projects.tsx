@@ -18,7 +18,7 @@ const projects: Project[] = [
     description:
       "Reservation system with scheduling, availability management and clean booking flow.",
     stack: ["PHP", "MySQL", "JavaScript"],
-    href: "#",
+    href: "https://kreteksehati.my.id/",
     icon: Map,
   },
   {

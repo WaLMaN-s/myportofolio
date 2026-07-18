@@ -1,13 +1,13 @@
 import { Github, Linkedin, Mail, Instagram } from "lucide-react";
 
 const socials = [
-  { label: "GitHub", href: "https://github.com/walman", icon: Github },
+  { label: "GitHub", href: "https://github.com/WaLMaN-s", icon: Github },
   {
     label: "LinkedIn",
     href: "https://linkedin.com/in/walman",
     icon: Linkedin,
   },
-  { label: "Email", href: "mailto:walman@example.com", icon: Mail },
+  { label: "Email", href: "sswalman49@gmai.com", icon: Mail },
   {
     label: "Instagram",
     href: "https://instagram.com/walman",
