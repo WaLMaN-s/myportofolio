@@ -12,6 +12,7 @@ const channels = [
   { label: "github.com/WaLMaN-s", href: "https://github.com/WaLMaN-s", icon: Github },
   { label: "instagram.com/faber_sitorus", href: "https://instagram.com/faber_sitorus", icon: Instagram },
   { label: "resume.pdf", href: `${BASE_PATH}/cv.pdf`, icon: FileDown },
+  
 ];
 
 const inputClass =

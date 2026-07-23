@@ -7,7 +7,7 @@ const socials = [
     label: "Instagram",
     href: "https://instagram.com/faber_sitorus",
     icon: Instagram,
-  },
+  },  
 ];
 
 export default function SocialLinks({ className = "" }: { className?: string }) {
