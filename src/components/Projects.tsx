@@ -1,6 +1,6 @@
 "use client";
 
-import { Coffee, Library, Map, Gamepad2 } from "lucide-react";
+import { Coffee, Library, Map, Gamepad2, Palmtree } from "lucide-react";
 import Reveal from "./Reveal";
 import ProjectCard, { type Project } from "./ProjectCard";
 
@@ -36,6 +36,14 @@ const projects: Project[] = [
     stack: ["Next.js", "TypeScript", "Tailwind"],
     href: "#",
     icon: Gamepad2,
+  },
+  {
+    title: "trip-rajaampat",
+    description:
+      "Tour package booking site for Raja Ampat with QRIS/bank transfer payment proof upload and an admin verification dashboard.",
+    stack: ["PHP", "MySQL", "Vanilla JS"],
+    href: "https://triprajaampat.infinityfreeapp.com/public/",
+    icon: Palmtree,
   },
 ];
 
