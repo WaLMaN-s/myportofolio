@@ -1,6 +1,6 @@
 "use client";
 
-import { Coffee, Library, Map, Gamepad2, Palmtree } from "lucide-react";
+import { Coffee, Library, Map, Ticket, Palmtree } from "lucide-react";
 import Reveal from "./Reveal";
 import ProjectCard, { type Project } from "./ProjectCard";
 
@@ -30,12 +30,12 @@ const projects: Project[] = [
     icon: Library,
   },
   {
-    title: "openplay-hub",
+    title: "tiket-konser",
     description:
-      "Gaming hub platform with curated content and a fast, minimal interface.",
-    stack: ["Next.js", "TypeScript", "Tailwind"],
-    href: "#",
-    icon: Gamepad2,
+      "Concert ticket booking platform with tiered pricing, countdown, and an admin dashboard for orders and payment confirmation.",
+    stack: ["PHP", "MySQL", "Bootstrap"],
+    href: "https://tiket-konser.infinityfreeapp.com/",
+    icon: Ticket,
   },
   {
     title: "trip-rajaampat",
