@@ -11,8 +11,7 @@ const channels = [
   { label: "sswalman49@gmail.com", href: "mailto:sswalman49@gmail.com", icon: Mail },
   { label: "github.com/WaLMaN-s", href: "https://github.com/WaLMaN-s", icon: Github },
   { label: "instagram.com/faber_sitorus", href: "https://instagram.com/faber_sitorus", icon: Instagram },
-  { label: "resume.pdf", href: `${BASE_PATH}/cv.pdf`, icon: FileDown },
-  
+  { label: "resume.pdf", href: `${BASE_PATH}/cv.pdf?v=20260723`, icon: FileDown },
 ];
 
 const inputClass =
