@@ -5,10 +5,10 @@ import TerminalWindow from "./TerminalWindow";
 const categories: { name: string; skills: string[] }[] = [
   { name: "Frontend/", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
   { name: "Backend/", skills: ["Laravel", "PHP", "Node.js", "REST API", "Auth"] },
-  { name: "Linux/", skills: ["Fedora", "Ubuntu Server", "Bash", "systemd", "Hyprland"] },
+  { name: "Linux/", skills: ["Fedora", "Kali Linux", "Ubuntu Server", "Bash", "systemd",] },
   { name: "Cloud/", skills: ["Cloudflare", "Vercel", "DNS", "SSL"] },
-  { name: "Database/", skills: ["MySQL", "PostgreSQL", "SQLite", "Redis"] },
-  { name: "Tools/", skills: ["Git", "Neovim", "tmux", "Postman", "Figma"] },
+  { name: "Database/", skills: ["MySQL","PHP Admin", "PostgreSQL", "SQLite", "Redis"] },
+  { name: "Tools/", skills: ["Git", "tmux", "Figma", "Xampp"] },
 ];
 
 export default function Skills() {

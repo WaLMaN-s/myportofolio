@@ -3,25 +3,25 @@ import Timeline, { type TimelineEntry } from "./Timeline";
 
 const entries: TimelineEntry[] = [
   {
-    year: "2025 — Now",
+    year: "2026 — Now",
     title: "Full Stack Developer — Freelance",
     description:
       "Designing and shipping production web apps end-to-end: Laravel & Next.js frontends, REST APIs, MySQL, and deployment on Linux servers.",
   },
   {
-    year: "2024",
+    year: "2025",
     title: "Backend & DevOps Focus",
     description:
       "Built reservation and management systems, hardened Linux VPS deployments, automated workflows with shell scripting.",
   },
   {
-    year: "2023",
+    year: "2024",
     title: "Web Developer — Projects & Study",
     description:
       "Delivered library systems and business websites while deepening fundamentals in PHP, JavaScript and databases.",
   },
   {
-    year: "2021",
+    year: "2023",
     title: "The Beginning",
     description:
       "First line of code and first Linux install. Fell in love with the terminal and never looked back.",

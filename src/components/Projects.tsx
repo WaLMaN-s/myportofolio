@@ -1,6 +1,6 @@
 "use client";
 
-import { Coffee, Library, Map, Ticket, Palmtree } from "lucide-react";
+import { Coffee, Library, Map, Gamepad2, Palmtree } from "lucide-react";
 import Reveal from "./Reveal";
 import ProjectCard, { type Project } from "./ProjectCard";
 
@@ -30,12 +30,12 @@ const projects: Project[] = [
     icon: Library,
   },
   {
-    title: "tiket-konser",
+    title: "Tiket-Konser",
     description:
-      "Concert ticket booking platform with tiered pricing, countdown, and an admin dashboard for orders and payment confirmation.",
-    stack: ["PHP", "MySQL", "Bootstrap"],
+      "Ticketing system for concerts with QR code ticket generation and admin dashboard for event management.",
+    stack: ["PHP", "java", "Tailwind"],
     href: "https://tiket-konser.infinityfreeapp.com/",
-    icon: Ticket,
+    icon: Gamepad2,
   },
   {
     title: "trip-rajaampat",
