@@ -5,8 +5,7 @@ import TerminalWindow from "./TerminalWindow";
 const categories: { name: string; skills: string[] }[] = [
   { name: "Frontend/", skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
   { name: "Backend/", skills: ["Laravel", "PHP", "Node.js", "REST API", "Auth"] },
-  { name: "Linux/", skills: ["Fedora", "Arch", "Bash", "systemd", "Hyprland"] },
-  { name: "DevOps/", skills: ["Nginx", "Docker", "CI/CD", "VPS Deployment"] },
+  { name: "Linux/", skills: ["Fedora", "Ubuntu Server", "Bash", "systemd", "Hyprland"] },
   { name: "Cloud/", skills: ["Cloudflare", "Vercel", "DNS", "SSL"] },
   { name: "Database/", skills: ["MySQL", "PostgreSQL", "SQLite", "Redis"] },
   { name: "Tools/", skills: ["Git", "Neovim", "tmux", "Postman", "Figma"] },
