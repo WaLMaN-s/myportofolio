@@ -5,9 +5,9 @@ import TerminalWindow from "./TerminalWindow";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const timeline = [
-  { year: "2025", text: "Building full-stack products & Linux infrastructure" },
-  { year: "2023", text: "Went deep into backend engineering & DevOps" },
-  { year: "2021", text: "Started the journey — first line of code" },
+  { year: "2025-Now", text: "Building full-stack products & Linux infrastructure" },
+  { year: "2025", text: "Went deep into backend engineering & DevOps" },
+  { year: "2023", text: "Started the journey — first line of code" },
 ];
 
 export default function About() {
