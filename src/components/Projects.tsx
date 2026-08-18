@@ -22,14 +22,6 @@ const projects: Project[] = [
     icon: Map,
   },
   {
-    title: "sistem-perpustakaan",
-    description:
-      "Library management system: catalog, lending workflow and member administration.",
-    stack: ["PHP", "MySQL", "Bootstrap-free UI"],
-    href: "#",
-    icon: Library,
-  },
-  {
     title: "Tiket-Konser",
     description:
       "Ticketing system for concerts with QR code ticket generation and admin dashboard for event management.",
