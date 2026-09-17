@@ -13,7 +13,7 @@ const articles: Article[] = [];
 
 
 
-export default function Blog() {
+export default function Certificate() {
   return (
     <section
       id="certificate"
@@ -33,7 +33,8 @@ export default function Blog() {
             <p className="font-mono text-sm text-muted">
               <span className="rainbow-ink">$</span> ls certificate
             </p>
-              No articles yet.
+            <p className="mt-3 font-mono text-sm text-muted">
+              No certificates yet.
             </p>
           </TerminalWindow>
         </Reveal>
