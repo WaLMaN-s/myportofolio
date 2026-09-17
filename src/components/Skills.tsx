@@ -9,6 +9,7 @@ const categories: { name: string; skills: string[] }[] = [
   { name: "Cloud/", skills: ["Cloudflare", "Vercel", "DNS", "SSL"] },
   { name: "Database/", skills: ["MySQL","XAMPP","Supabase", "SQLite", "Mariadb"] },
   { name: "Tools/", skills: ["Git", "tmux", "Figma", "Xampp"] },
+  { name: "DataAnasis/", skills: ["python", "SQL", "R", "preadsheet", "Power BI"] },
 ];
 
 export default function Skills() {

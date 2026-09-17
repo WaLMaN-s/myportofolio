@@ -11,10 +11,12 @@ type Article = {
 
 const articles: Article[] = [];
 
+
+
 export default function Blog() {
   return (
     <section
-      id="blog"
+      id="certificate"
       className="mx-auto max-w-7xl scroll-mt-20 px-4 py-16 sm:px-6"
     >
       <Reveal>
@@ -26,11 +28,11 @@ export default function Blog() {
 
       {articles.length === 0 ? (
         <Reveal>
-          <TerminalWindow title="walman@portfolio:~/blog">
+
+          <TerminalWindow title="walman@portfolio:~/certificate">
             <p className="font-mono text-sm text-muted">
               <span className="rainbow-ink">$</span> ls certificate
             </p>
-            <p className="mt-3 font-mono text-sm text-muted">
               No articles yet.
             </p>
           </TerminalWindow>
