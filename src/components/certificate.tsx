@@ -111,7 +111,7 @@ function previewSrc(dir: string, file: string) {
 }
 
 export default function Certificate() {
-  const [openDirs, setOpenDirs] = useState<string[]>(["mysql"]);
+  const [openDirs, setOpenDirs] = useState<string[]>([]);
   const [preview, setPreview] = useState<{ dir: string; index: number } | null>(
     null,
   );
