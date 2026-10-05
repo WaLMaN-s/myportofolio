@@ -75,7 +75,26 @@ const categories: Category[] = [
       },
     ],
   },
+
+  {
+    dir: "network",
+    items: [
+      {
+        title: "Fundamental Networking",
+        file: "fundamental_network.pdf",
+      },
+      {
+        title: "Network for Beginner",
+        file: "network_for_beginner.pdf",
+      },
+      {
+        title: "Network for Intermediate",
+        file: "network_for_intermediate.pdf",
+      },
+    ],
+  },
 ];
+
 
 const total = categories.reduce((n, category) => n + category.items.length, 0);
 
