@@ -54,7 +54,7 @@ Tidak wajib — kalau build gagal di GitHub Actions, situs lama tetap live, tida
 | Warna & animasi global | `src/app/globals.css` |
 | Foto profil mode gelap | `public/profile-dark.jpeg` (timpa filenya) |
 | Foto profil mode terang | `public/profile.jpeg` (timpa filenya) |
-| CV yang bisa didownload | `public/cv.pdf` (timpa filenya) |
+| CV yang bisa didownload | `public/CV_baru.pdf` (timpa filenya) |
 | Logo Arch ASCII + gradient | `src/components/AsciiLogo.tsx` |
 
 ---

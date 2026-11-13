@@ -69,7 +69,7 @@ export default function Hero() {
                 className="mt-8 flex flex-wrap gap-4"
               >
                 <Button href="#projects">View Projects</Button>
-                <Button href="/cv.pdf" variant="ghost" external>
+                <Button href="/CV_baru.pdf" variant="ghost" external>
                   Download CV
                 </Button>
               </motion.div>
