@@ -1,6 +1,6 @@
 "use client";
 
-import { Coffee, Library, Map, Gamepad2, Palmtree } from "lucide-react";
+import { Coffee, Heart, Map, Gamepad2, Palmtree } from "lucide-react";
 import Reveal from "./Reveal";
 import ProjectCard, { type Project } from "./ProjectCard";
 
@@ -37,6 +37,14 @@ const projects: Project[] = [
     href: "https://triprajaampat.infinityfreeapp.com/public/",
     icon: Palmtree,
   },
+  {
+    title: "rivaria-wedding-organizer",
+    description:
+      "Landing page and company profile for RIVARIA Wedding & Event Organizer serving Cinere and Jabodetabek.",
+    stack: ["React", "Vite", "CSS"],
+    href: "https://walman-s.github.io/RIVARIA-WEDDING-ORGANIZER/",
+    icon: Heart,
+  },
 ];
 
 export default function Projects() {
@@ -51,7 +59,7 @@ export default function Projects() {
           <span className="text-accent">ls projects</span>
         </h2>
       </Reveal>
-      <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project, i) => (
           <Reveal key={project.title} delay={i * 0.08} className="h-full">
             <ProjectCard project={project} />
