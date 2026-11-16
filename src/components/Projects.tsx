@@ -42,7 +42,7 @@ const projects: Project[] = [
     description:
       "Landing page and company profile for RIVARIA Wedding & Event Organizer serving Cinere and Jabodetabek.",
     stack: ["React", "Vite", "CSS"],
-    href: "https://walman-s.github.io/RIVARIA-WEDDING-ORGANIZER/",
+    href: "https://walman-s.github.io/RIVARIA/",
     icon: Heart,
   },
 ];
